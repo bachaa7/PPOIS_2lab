@@ -28,29 +28,34 @@ using namespace std;
 
 
 
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
 int main()
 {
-
     setlocale(LC_ALL, "RU");
 
+    AudioFile audio("Конференция", 800, "mp3");
+    AudioBook audiobook("Остис", 600, "mp3", "Сотников", "Сотников");
+    MusicTrack musicTrack("Лето", 221, "wav", "Кельвин Харрис", "Моушн");
 
-    AudioFile audio("Example Audio", 300, "mp3");
-    AudioBook audiobook("Example Audiobook", 600, "mp3", "Author Name", "Narrator Name");
-    MusicTrack musicTrack("Example Track", 250, "wav", "Artist", "Album Name");
-
-    cout << "Audio File Info: " << endl;
-    cout << "Title: " << audio.getTitle() << ", Format: " << audio.getFormat() << ", Duration: " << audio.getTimeInSeconds() << " seconds" << endl;
+    cout << "Информация о аудиофайле: " << endl;
+    cout << "Название: " << audio.getTitle() << ", Формат: " << audio.getFormat() << ", Длительность: " << audio.getTimeInSeconds() << " секунд" << endl;
     audio.play();
 
-    cout << "\nAudiobook Info: " << endl;
-    cout << "Title: " << audiobook.getTitle() << ", Author: " << audiobook.getAuthor() << ", Narrator: " << audiobook.getNarrator() << ", Duration: " << audiobook.getTimeInSeconds() << " seconds" << endl;
+    cout << "\nИнформация об аудиокниге: " << endl;
+    cout << "Название: " << audiobook.getTitle() << ", Автор: " << audiobook.getAuthor() << ", Чтец: " << audiobook.getNarrator() << ", Длительность: " << audiobook.getTimeInSeconds() << " секунд" << endl;
     audiobook.play();
 
-    Podcast podcast("Tech Talks", 1200, "mp3", "John Doe");
-    podcast.addEpisode("Episode 1: Introduction to Programming");
-    podcast.addEpisode("Episode 2: Advanced Topics");
-    cout << "\nPodcast Info: " << endl;
-    cout << "Host: " << podcast.getHost() << ", Title: " << podcast.getTitle() << endl;
+    Podcast podcast("Технические беседы", 1200, "mp3", "Джон Доу");
+    podcast.addEpisode("Эпизод 1: Введение в программирование");
+    podcast.addEpisode("Эпизод 2: Продвинутые темы");
+    cout << "\nИнформация о подкасте: " << endl;
+    cout << "Ведущий: " << podcast.getHost() << ", Название: " << podcast.getTitle() << endl;
     podcast.play();
 
     Library mediaLibrary;
@@ -61,44 +66,43 @@ int main()
 
     mediaLibrary.displayAllMedia();
 
-
-    Album album("Greatest Hits");
+    Album album("Величайшие хиты");
     album.addTrack(&audio);
     album.addTrack(&musicTrack);
-    cout << "\nAlbum Info: " << endl;
+    cout << "\nИнформация об альбоме: " << endl;
     album.play();
 
-    UserAccount user("username1", "user@example.com", "password123");
+    UserAccount user("пользователь1", "user@example.com", "password123");
     user.displayAccountInfo();
 
-    Subscription subscription(&user, "Premium");
+    Subscription subscription(&user, "Премиум");
     subscription.activateSubscription();
-    cout << "Subscription status: " << (subscription.isActiveStatus() ? "Active" : "Inactive") << endl;
+    cout << "Статус подписки: " << (subscription.isActiveStatus() ? "Активна" : "Неактивна") << endl;
 
     Settings settings;
-    settings.setTheme("Dark");
+    settings.setTheme("Тёмная");
     settings.setFont("Verdana");
     settings.displaySettings();
 
-    AudioEditor audioEditor("Edited Audio", 300, "mp3");
+    AudioEditor audioEditor("Отредактированный аудиофайл", 300, "mp3");
     audioEditor.setVolume(0.8);
     audioEditor.setSpeed(1.2);
-    audioEditor.addEffect("Echo");
+    audioEditor.addEffect("Эхо");
     audioEditor.applyEffects();
     audioEditor.play();
 
-    Playlist playlist("My Playlist");
+    Playlist playlist("Мой плейлист");
     playlist.AddTrack(&audio);
     playlist.AddTrack(&musicTrack);
-    cout << "\nPlaying Playlist: " << endl;
+    cout << "\nВоспроизведение плейлиста: " << endl;
     playlist.playAll();
 
     UserPlaylist userPlaylist(&playlist, &user);
     userPlaylist.play();
 
-    Advertisement ad("This is a great product!", 30);
+    Advertisement ad("Это отличное предложение!", 30);
     ad.playAd();
-   
+
     return 0;
 }
 

@@ -14,7 +14,7 @@ int Album::getTotalDuration() {
 }
 
 void Album::play() {
-    cout << "Playing album: " << albumName << "\n";
+    cout << "Воспроизводится альбом: " << albumName << "\n";
     for (const auto& track : tracks) {
         track->play();
     }

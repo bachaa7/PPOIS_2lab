@@ -11,10 +11,10 @@ void UserPlaylist::linkPlaylistToUser(UserAccount* user) {
 
 void UserPlaylist::play() {
     if (user) {
-        cout << user->getUsername() << " is playing their playlist:\n";
+        cout << user->getUsername() << " играет его плейлист :\n";
         playlist->playAll();
     }
     else {
-        cout << "No user linked to this playlist.\n";
+        cout << "Ќи один пользователь не св€зан с этим списком воспроизведени€.\n";
     }
 }

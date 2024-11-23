@@ -7,12 +7,12 @@ Subscription::Subscription(UserAccount* user, const string& subscriptionType)
 
 void Subscription::activateSubscription() {
     isActive = true;
-    cout << "Subscription activated for " << user->getUsername() << ".\n";
+    cout << "Подписка активирована для " << user->getUsername() << ".\n";
 }
 
 void Subscription::cancelSubscription() {
     isActive = false;
-    cout << "Subscription canceled for " << user->getUsername() << ".\n";
+    cout << "Подписка отменена для " << user->getUsername() << ".\n";
 }
 
 bool Subscription::isActiveStatus() const {

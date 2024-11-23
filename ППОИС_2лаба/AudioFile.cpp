@@ -11,6 +11,6 @@ string AudioFile::getFormat()const{
 
 void AudioFile::play() const {
 
-    cout << "Audio Play: " << title << " [" << format << " ]\n";
+    cout << "Воспроизводится Аудио: " << title << " [" << format << " ]\n";
 
 }

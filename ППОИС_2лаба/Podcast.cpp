@@ -22,9 +22,9 @@ void Podcast::addEpisode(const string& episode) {
 
 
 void Podcast::play() const {
-    cout << "Podcast: " << title << " hosted by " << host << endl;
+    cout << "Подкаст: " << title << " опубликован " << host << endl;
     for (const auto& episode : episodes) {
-        cout << "  Episode: " << episode << endl;
+        cout << "  Эпизоды: " << episode << endl;
     }
 }
 
