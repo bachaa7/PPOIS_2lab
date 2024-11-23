@@ -13,12 +13,12 @@ void AudioStreamingService::playAd() {
         ads[randomIndex]->playAd();
     }
     else {
-        cout << "Нет рекламы.\n";
+        cout << "No ads available.\n";
     }
 }
 
 void AudioStreamingService::listUsers() {
-    cout << "Пользователь зарегистрирован в  " << serviceName << ":\n";
+    cout << "Users registered in " << serviceName << ":\n";
     for (const auto& user : users) {
         cout << user->getUsername() << "\n";
     }

@@ -25,7 +25,7 @@ string AudioBook::getNarrator() const {
 void AudioBook::play() const {
 
 
-	cout << "Воспроизводится аудиокнига : " << title << " от " << author << ", чтец " << narrator << endl;
+	cout << "Playing audiobook: " << title << " by " << author << ", narrated by " << narrator << endl;
 
 
 

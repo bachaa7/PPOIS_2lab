@@ -12,7 +12,7 @@ private:
     string font;      
 
 public:
-    Settings(const string& theme = "Светлая", const string& font = "Arial");
+    Settings(const string& theme = "Light", const string& font = "Arial");
 
     void setTheme(const string& newTheme);
     void setFont(const string& newFont);

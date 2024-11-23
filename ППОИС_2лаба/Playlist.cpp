@@ -12,7 +12,7 @@ void Playlist::AddTrack(AudioContent* track) {
 
 void Playlist::playAll() const {
 
-	cout << "Воспроизводится плэйлист: " << name << "\n";
+	cout << "Play list play: " << name << "\n";
 	for (const auto& track : tracks) {
 		track->play();
 	}

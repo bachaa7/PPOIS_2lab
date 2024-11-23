@@ -6,12 +6,12 @@ Settings::Settings(const string& theme, const string& font)
     : theme(theme), font(font) {}
 
 void Settings::setTheme(const string& newTheme) {
-    if (newTheme == "Светлая" || newTheme == "Темная") {
+    if (newTheme == "Light" || newTheme == "Dark") {
         theme = newTheme;
         cout << "Тема изменена на " << theme << ".\n";
     }
     else {
-        cout << "Некорректное значение темы. Доступные значения: Светлая, Темная.\n";
+        cout << "Некорректное значение темы. Доступные значения: Light, Dark.\n";
     }
 }
 

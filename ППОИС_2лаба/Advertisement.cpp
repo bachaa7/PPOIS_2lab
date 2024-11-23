@@ -6,5 +6,5 @@
 Advertisement::Advertisement(const string& adContent, int duration) : adContent(adContent), duration(duration) {}
 
 void Advertisement::playAd() {
-    cout << "Реклама: " << adContent << " [" << duration << " секунды ]\n";
+    cout << "Playing ad: " << adContent << " [" << duration << " seconds]\n";
 }

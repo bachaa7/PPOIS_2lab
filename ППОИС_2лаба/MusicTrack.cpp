@@ -13,5 +13,5 @@ string MusicTrack::getAlbum() const {
 }
 
 void MusicTrack::play() const {
-    cout << "Воспроизводится музыкальный  трек : " << title << " от " << artist << " из альбома " << album << "\n";
+    cout << "Playing music track: " << title << " by " << artist << " from album " << album << "\n";
 }
